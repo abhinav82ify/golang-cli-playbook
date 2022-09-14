@@ -82,7 +82,7 @@ func OpenFileAndFindNthString(filename string, nth int, expected string) bool {
 
 		// matching logic
 		ss := strings.Split(trimmed, "=")
-		if ss[nth] == expected {
+		if strings.Contains(ss[nth], expected) {
 			return true
 		}
 	}
